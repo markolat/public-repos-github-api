@@ -1,0 +1,46 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %}
+    <title>Repo list page</title>
+{% endblock %}
+
+{% block content %}
+
+    <h1>Repositories</h1>
+
+    {% if repositories %}
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Description</th>
+                <th>URL</th>
+                <th>Language</th>
+                <th>Watchers</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for repo in repositories %}
+
+                <tr>
+                    <td>{{repo.id}}</td>
+                    <td>{{repo.name}}</td>
+                    <td>{{repo.description}}</td>
+                    <td>{{repo.url}}</td>
+                    <td>{{repo.language}}</td>
+                    <td>{{repo.watchers_count}}</td>
+                </tr>
+
+            {% endfor %}
+        </tbody>
+    </table>
+
+    {% else %}
+
+        <p>There are no repositories.</p>
+
+    {% endif %}
+
+{% endblock %}
