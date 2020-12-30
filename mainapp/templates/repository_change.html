@@ -1,36 +1,36 @@
 {% extends 'layouts/base.html' %}
 
 {% block title %}
-    <title>Repo change name page</title>
+<title>Repo change name page</title>
 {% endblock %}
 
 {% block content %}
 
-  <div class="form-wrapper">
-      <h1>Change repository name</h1>
-      <form>
-          <div class="field">
-              <label class="label">Repository id:</label>
-              <div class="control">
-                  <input id="repository-id-input" class="input" type="number" name="id" required>
-              </div>
-          </div>
+<div class="form-wrapper">
+  <h1>Change repository name</h1>
+  <form>
+    <div class="field">
+      <label class="label">Repository id:</label>
+      <div class="control">
+        <input id="repository-id-input" class="input" type="number" name="id" required>
+      </div>
+    </div>
 
-          <div class="field">
-              <label class="label">New repository name:</label>
-              <div class="control">
-                  <input id="new-name-input" class="input" type="text" name="new-name" required>
-              </div>
-          </div>
+    <div class="field">
+      <label class="label">New repository name:</label>
+      <div class="control">
+        <input id="new-name-input" class="input" type="text" name="new-name" required>
+      </div>
+    </div>
 
-          <div class="field">
-              <div class="control">
-                  <button id="change-name-btn" class="button is-link">Submit</button>
-              </div>
-          </div>
-      </form>
-  </div>
+    <div class="field">
+      <div class="control">
+        <button id="change-name-btn" class="button is-link">Submit</button>
+      </div>
+    </div>
+  </form>
+</div>
 
-  <div id="message-change-repo-name" class="message-wrapper"></div>
+<div id="message-change-repo-name" class="message-wrapper"></div>
 
 {% endblock %}

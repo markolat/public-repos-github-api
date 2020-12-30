@@ -1,48 +1,55 @@
-
-*{
-    padding: 0;
-    margin: 0;
+* {
+  padding: 0;
+  margin: 0;
 }
 
-.form-wrapper{
-    margin: 20px auto;
+.form-wrapper {
+  margin: 20px auto;
 }
 
-.message-wrapper{
-    width: 50%;
-}
-
-.loader{
-    display: none;
-    width: 50px;
-    height: 50px;
-    margin-left: 20%;
-}
-
-.content{
-    margin-top: 50px;
-}
-
-.input{
-    width: 50%;
+.message-wrapper {
+  width: 50%;
 }
 
 .loader {
-    border: 6px solid #f3f3f3;
-    border-radius: 50%;
-    border-top: 6px solid #000;
-    width: 50px;
-    height: 50px;
-    -webkit-animation: spin 2s linear infinite;
-    animation: spin 2s linear infinite;
+  display: none;
+  width: 50px;
+  height: 50px;
+  margin-left: 20%;
+}
+
+.content {
+  margin-top: 50px;
+}
+
+.input {
+  width: 50%;
+}
+
+.loader {
+  border: 6px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 6px solid #000;
+  width: 50px;
+  height: 50px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
 }
 
 @-webkit-keyframes spin {
-0% { -webkit-transform: rotate(0deg); }
-100% { -webkit-transform: rotate(360deg); }
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
 }
 
 @keyframes spin {
-0% { transform: rotate(0deg); }
-100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }

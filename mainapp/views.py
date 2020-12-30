@@ -12,11 +12,13 @@ def index(request):
 
     return render(request, 'index.html')
 
+
 @decorator_from_middleware(CheckRepoList)
 def list_repositories(request):
     """ Returns page with data of all repositories of a user """
 
     return render(request, 'repository_list.html', {'repositories': REPOSITORIES})
+
 
 @decorator_from_middleware(CheckRepoList)
 def change_repository_name(request):
@@ -31,4 +33,3 @@ def reload(request):
     REPOSITORIES.clear()
 
     return redirect('index')
-

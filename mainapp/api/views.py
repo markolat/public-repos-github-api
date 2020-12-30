@@ -18,7 +18,7 @@ def get_repositories(request):
         response = requests.get(f"https://api.github.com/users/{github_username}/repos")
 
         data = {
-            'status':'fail',
+            'status': 'fail',
             'message': 'Error while collecting data.'
         }
 
@@ -51,7 +51,7 @@ def change_name(request):
     if request.method == 'POST':
 
         data = {
-            'status':'fail',
+            'status': 'fail',
             'message': 'Bad data'
         }
         status_code = 400
@@ -61,7 +61,6 @@ def change_name(request):
         new_name = request.POST.get('new-name', False)
 
         if repo_id and new_name:
-            
             for repo in REPOSITORIES:
                 if repo.id == repo_id:
                     repo.name = new_name

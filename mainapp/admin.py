@@ -6,4 +6,4 @@ from mainapp.models import Repository
 
 @admin.register(Repository)
 class RepositoryAdmin(admin.ModelAdmin):
-     list_display = ('id', 'name', 'description', 'url', 'language', 'watchers_count')
+    list_display = ('id', 'name', 'description', 'url', 'language', 'watchers_count')
